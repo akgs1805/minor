@@ -1,5 +1,5 @@
 <?php
-class hc{
+class distance{
  public $link='';
  function __construct($distance){
   $this->connect();
@@ -7,7 +7,7 @@ class hc{
  }
  
  function connect(){
-  $this->link = mysqli_connect('localhost','root','') or die('Cannot connect to the DB');
+  $this->link = mysqli_connect('192.168.43.177','admin_anil','admin','minor') or die('Cannot connect to the DB');
   mysqli_select_db($this->link,'minor') or die('Cannot select the DB');
  }
  
@@ -18,6 +18,6 @@ class hc{
  
 }
 if($_GET['distance'] != ''){
- $hc=new hc($_GET['distance']);
+ $distance=new distance($_GET['distance']);
 }
 ?>
